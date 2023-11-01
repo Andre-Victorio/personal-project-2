@@ -1,0 +1,54 @@
+.header-div{
+  background-color:black;
+  display: flex;
+  position: fixed;
+  justify-content:space-between;
+  height:24px;
+  padding: 16px 3%;
+  left:0;
+  top: 0;
+  right: 0;
+  color:white;
+}
+.header-div-left{
+  display:flex;
+  justify-content:space-between;
+}
+.header-div-right{
+  display: flex;
+}
+.header-div-right{
+}
+.header-div-right-text{
+
+}
+
+.Join-now{
+  margin-left: 10px;
+  background-color:#e20813;
+  border:0;
+  color:white;
+  padding:14px 2em;
+  min-width:112px;
+  line-height: 0px;
+  text-anchor: middle;
+  font-weight: 400;
+  font-size:13px;
+  font-family:inherit;
+}
+
+
+.authLink{
+  border:solid 1px white ;
+  margin-left:10px;
+  color:white;
+  text-decoration:none;
+  min-width:112px;
+  line-height: 0px;
+  min-height:15px;
+  box-sizing: border-box;
+  padding: 9px 20px;
+  text-align:center;
+  font-size:13px;
+  border-radius:2px;
+}
