@@ -5,6 +5,8 @@ const Header = () =>{
     <>
       <div className="header-div">
         <div className="header-div-left">
+          <img path="./assets/Netflix_2015_logo.svg"></img>
+
         </div>
         <div className="header-div-right">
           <div className="header-div-right-text">Hello</div>
