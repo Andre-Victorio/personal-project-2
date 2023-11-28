@@ -21,3 +21,33 @@
   flex-wrap: wrap;
   width:30%;
 }
+
+.genre-body {
+  margin-left: 50px;
+  color:aliceblue;
+  height:500px;
+}
+
+.horizontal-container{
+  display:flex;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+}
+
+.movieItem {
+  flex:0 0 auto;
+}
+
+.movie-item-item{
+  width:150px;
+  margin:10px;
+  text-align:center;
+  overflow-x:hidden;
+}
+.movie-item-item img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+}
+
