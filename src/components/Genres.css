@@ -30,7 +30,7 @@
 
 .horizontal-container{
   display:flex;
-  overflow-x:auto;
+  overflow-x:hidden;
   overflow-y:hidden;
   white-space:nowrap;
 }
@@ -44,6 +44,7 @@
   margin:10px;
   text-align:center;
   overflow-x:hidden;
+  z-index:1;
 }
 .movie-item-item img{
   width:100%;
@@ -51,3 +52,25 @@
   border-radius:8px;
 }
 
+.component-movies{
+  display:flex;
+}
+
+.scroll-right-genres{
+  position: static;
+  float:right;
+  z-index:100;
+}
+
+.scroll-right-genres{
+  position: static;
+  float:left;
+  z-index:100;
+}
+
+.component-movies button{
+  background-color: rgba(0,0,0,0);
+  color: firebrick;
+  font-weight:bolder;
+  border:none;
+}
