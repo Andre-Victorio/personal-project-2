@@ -1,6 +1,8 @@
 import "./Genres.css";
-import Axios from "axios"
+import "./HorizontalContainer.jsx";
+import Axios from "axios";
 import {useEffect, useState} from "react";
+import RowContainer from "./RowContainer.jsx";
 const Genres = () =>{
   const [movies, setMovies] = useState([]);
 
@@ -22,22 +24,6 @@ const Genres = () =>{
     });
   }
 
-  //buttons used to scroll; can be made into components
-  const scrollButtonRight = () =>{
-    const container = document.querySelector(".horizontal-container");
-    container.scrollTo({
-      left: container.scrollLeft + 200,
-      behavior:"smooth",
-    });
-  };
-
-  const scrollButtonLeft = () =>{
-    const container = document.querySelector(".horizontal-container");
-    container.scrollTo({
-      left: container.scrollLeft - 200,
-      behavior:"smooth",
-    });
-  };
   
   return(
     <>
@@ -46,32 +32,14 @@ const Genres = () =>{
           <h1>Only on Netflix</h1>
         </div>
         <div className="genre-header-paragraph">
-          <p>Netflix is the home of amazing original programming that you can't find anywhere else. Movies, TV shows, specials and more, all tailored specifically to you.</p>
+          <p>Netflix is the home of amazing original programming that you can&apos;t find anywhere else. Movies, TV shows, specials and more, all tailored specifically to you.</p>
         </div>
       </div>
       <div className="genre-body">
-        {/*used to store the entire row; can be turned into a component*/}
+        {/*used to store the entire row; no need to turn into a component*/}
         <div className="genre-popular-row">
           <h2>Popular Now</h2>
-          {/*Used to group the buttons and the container, doesn't need to be turned into a component*/}
-          <div className="component-movies">
-            <button className="scroll-left-genres" onClick={scrollButtonLeft}>&lt;</button>
-            {/*used to contain all the movies in the row; can be turned into a component*/}
-            <div className="horizontal-container">
-              {/*this is the map of all the movies fetched from via the api; can be turned into a component*/}
-                {movies.map(movie => (
-                <div key={movie.id} className="movieItem">
-                  <div className="movie-item-item">
-                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}></img>
-                    <p>{movie.title}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <button className="scroll-right-genres" onClick={()=>{
-              scrollButtonRight();
-            }}>&gt;</button>
-          </div>
+          <RowContainer parentContainer="PopularRow" movies={movies}></RowContainer>
         </div>
       </div>
     </>

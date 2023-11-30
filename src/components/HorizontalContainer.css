@@ -1,0 +1,24 @@
+
+.horizontal-container{
+  display:flex;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  white-space:nowrap;
+}
+
+.movieItem {
+  flex:0 0 auto;
+}
+
+.movie-item-item{
+  width:150px;
+  margin:10px;
+  text-align:center;
+  overflow-x:hidden;
+  z-index:1;
+}
+.movie-item-item img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+}
