@@ -1,7 +1,6 @@
 import "./HorizontalContainer.css";
 const HorizontalContainer = (props) =>{
   const movies = props.movArr;
-  console.log(props.parentContainer);
   return(
     <>
       <div className={"container " + props.parentContainer} style={{display:'flex', overflowX:"hidden", overflowY:'hidden', whiteSpace:'nowrap'}}>

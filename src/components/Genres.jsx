@@ -1,5 +1,4 @@
 import "./Genres.css";
-import "./HorizontalContainer.jsx";
 import Axios from "axios";
 import {useEffect, useState} from "react";
 import RowContainer from "./RowContainer.jsx";

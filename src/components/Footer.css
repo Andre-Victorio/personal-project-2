@@ -1,0 +1,29 @@
+.footer-container{
+  text-align: center;
+  color:aliceblue;
+}
+
+.footer-head{
+  font-size: 24px;
+}
+
+.footer-body{
+  padding-left: 35%;
+  padding-right: 35%;
+}
+
+
+.join-now{
+  margin-left: 10px;
+  background-color:#e20813;
+  border:0;
+  color:white;
+  padding:14px 2em;
+  min-width:112px;
+  line-height: 0px;
+  text-anchor: middle;
+  font-weight: 400;
+  font-size:13px;
+  font-family:inherit;
+  border-radius: 2px;
+}
