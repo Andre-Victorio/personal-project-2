@@ -1,6 +1,5 @@
 import Header from "./components/Header.jsx"
 import Genres from "./components/Genres.jsx"
-import Footer from "./components/Footer.jsx"
 import "./App.css"
 function App() {
 
@@ -8,7 +7,6 @@ function App() {
     <>
       <Header/>
       <Genres/>
-      <Footer/>
     </>
   )
 }

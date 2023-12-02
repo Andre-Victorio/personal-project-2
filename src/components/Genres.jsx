@@ -2,8 +2,11 @@ import "./Genres.css";
 import Axios from "axios";
 import {useEffect, useState} from "react";
 import RowContainer from "./RowContainer.jsx";
+import Footer from "./Footer.jsx"
 const Genres = () =>{
   const [movies, setMovies] = useState([]);
+  const [actionMovies, setActionMovies] = useState([]);
+  const [newMovies, setNewMovies] = useState([]);
 
   useEffect(()=>{
     fetchMovies();
@@ -20,6 +23,23 @@ const Genres = () =>{
     }).then(response =>{
       console.log(response.data.results);
       setMovies(response.data.results);
+    });
+    Axios.get(`${url}/discover/movie`, {
+      params:{
+        api_key: apiKey,
+        with_genres:28,
+      },
+    }).then(response =>{
+      console.log(response.data.results);
+      setActionMovies(response.data.results);
+    });
+    Axios.get(`${url}/movie/now_playing`, {
+      params:{
+        api_key: apiKey,
+      },
+    }).then(response =>{
+      console.log(response.data.results);
+      setNewMovies(response.data.results);
     });
   }
 
@@ -40,6 +60,15 @@ const Genres = () =>{
           <h2>Popular Now</h2>
           <RowContainer parentContainer="PopularRow" movies={movies}></RowContainer>
         </div>
+        <div className="genre-action-row">
+          <h2>Action Movies</h2>
+          <RowContainer parentContainer="ActionRow" movies={actionMovies}></RowContainer>
+        </div>
+        <div className="genre-new-releases">
+          <h2>Now Playing</h2>
+          <RowContainer parentContainer="NewRow" movies={newMovies}></RowContainer>
+        </div>
+        <Footer></Footer>
       </div>
     </>
   )

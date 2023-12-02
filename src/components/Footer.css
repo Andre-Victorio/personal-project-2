@@ -1,6 +1,8 @@
 .footer-container{
   text-align: center;
   color:aliceblue;
+  position:relative;
+  margin-top:auto;
 }
 
 .footer-head{

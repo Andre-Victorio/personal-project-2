@@ -26,6 +26,8 @@
   margin-left: 50px;
   color:aliceblue;
   height:500px;
+  display:flex;
+  flex-direction: column;
 }
 
 
