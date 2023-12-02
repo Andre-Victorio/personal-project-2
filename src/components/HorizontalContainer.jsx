@@ -8,8 +8,10 @@ const HorizontalContainer = (props) =>{
           {movies.map(movie => (
           <div key={movie.id} className="movieItem">
             <div className="movie-item-item">
+              <a href={"/" + movie.title} className="movie-item-link" >
               <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}></img>
               <p>{movie.title}</p>
+              </a>
             </div>
           </div>
         ))}

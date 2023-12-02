@@ -21,7 +21,6 @@ const Genres = () =>{
         api_key: apiKey,
       },
     }).then(response =>{
-      console.log(response.data.results);
       setMovies(response.data.results);
     });
     Axios.get(`${url}/discover/movie`, {

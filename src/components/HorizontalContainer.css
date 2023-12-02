@@ -17,8 +17,14 @@
   overflow-x:hidden;
   z-index:1;
 }
+
 .movie-item-item img{
   width:100%;
   height:auto;
   border-radius:8px;
+}
+
+.movie-item-link{
+  color:aliceblue;
+  text-decoration:none;
 }
