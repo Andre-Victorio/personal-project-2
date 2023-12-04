@@ -5,7 +5,6 @@ import HorizontalContainer from "./HorizontalContainer.jsx";
 const RowContainer = (props) =>{
   const {parentContainer, movies} = props
   const containerRef = useRef(null);
-  const [movieID, setMovieID] = useState();
   useEffect(()=>{
     const container = document.querySelector("." + parentContainer);
     containerRef.current = container;
