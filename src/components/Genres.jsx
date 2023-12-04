@@ -29,7 +29,6 @@ const Genres = () =>{
         with_genres:28,
       },
     }).then(response =>{
-      console.log(response.data.results);
       setActionMovies(response.data.results);
     });
     Axios.get(`${url}/movie/now_playing`, {
@@ -37,12 +36,10 @@ const Genres = () =>{
         api_key: apiKey,
       },
     }).then(response =>{
-      console.log(response.data.results);
       setNewMovies(response.data.results);
     });
   }
 
-  
   return(
     <>
       <div className="genre-header-module">
@@ -57,18 +54,18 @@ const Genres = () =>{
         {/*used to store the entire row; no need to turn into a component*/}
         <div className="genre-popular-row">
           <h2>Popular Now</h2>
-          <RowContainer parentContainer="PopularRow" movies={movies}></RowContainer>
+          <RowContainer parentContainer="PopularRow" movies={movies} ></RowContainer>
         </div>
         <div className="genre-action-row">
           <h2>Action Movies</h2>
-          <RowContainer parentContainer="ActionRow" movies={actionMovies}></RowContainer>
+          <RowContainer parentContainer="ActionRow" movies={actionMovies} ></RowContainer>
         </div>
         <div className="genre-new-releases">
           <h2>Now Playing</h2>
-          <RowContainer parentContainer="NewRow" movies={newMovies}></RowContainer>
+          <RowContainer parentContainer="NewRow" movies={newMovies} ></RowContainer>
         </div>
-        <Footer></Footer>
       </div>
+      <Footer></Footer>
     </>
   )
 }
